@@ -1,4 +1,4 @@
-# ansible-role-fail2ban
+# Ansible Role - Fail2Ban
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/ursinn/ansible-role-fail2ban?logo=github&style=for-the-badge)](https://github.com/ursinn/ansible-role-fail2ban/commits)
 [![License](https://img.shields.io/github/license/ursinn/ansible-role-fail2ban?style=for-the-badge)](https://github.com/ursinn/ansible-role-fail2ban/blob/main/LICENSE)
