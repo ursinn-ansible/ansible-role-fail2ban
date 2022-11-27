@@ -1,6 +1,6 @@
 ---
 - name: Install Fail2ban
-  package:
+  ansible.builtin.package:
     name: "{{ system_fail2ban_package }}"
     state: "{{ system_fail2ban_package_state }}"
   notify: restart fail2ban
@@ -13,7 +13,7 @@
     block: "{{ system_fail2ban_jail_local }}"
 
 - name: Ensure Fail2ban is started and enabled at boot
-  service:
+  ansible.builtin.service:
     name: fail2ban
     state: "{{ system_fail2ban_service_state }}"
     enabled: "{{ system_fail2ban_service_enabled }}"
