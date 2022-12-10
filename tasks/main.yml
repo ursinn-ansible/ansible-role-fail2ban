@@ -11,7 +11,7 @@
     dest: /etc/fail2ban/jail.local
     create: true
     block: "{{ system_fail2ban_jail_local }}"
-    notify: restart fail2ban
+  notify: restart fail2ban
 
 - name: Ensure Fail2ban is started and enabled at boot
   ansible.builtin.service:
