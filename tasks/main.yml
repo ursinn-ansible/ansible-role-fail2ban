@@ -13,6 +13,13 @@
     block: "{{ system_fail2ban_jail_local }}"
   notify: restart fail2ban
 
+- name: "Limit Fail2ban memory usage"
+  ansible.builtin.blockinfile:
+    dest: "/etc/default/fail2ban"
+    block: |
+      ulimit -s 256
+  notify: restart fail2ban
+
 - name: Ensure Fail2ban is started and enabled at boot
   ansible.builtin.service:
     name: fail2ban
